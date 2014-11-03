@@ -1,5 +1,6 @@
 package com.exxeta.jenkins.plugins.sidebar.updatenotification;
 
+import static com.exxeta.jenkins.plugins.sidebar.updatenotification.JenkinsPermissionValidator.userHasNoAdministerPermission;
 import hudson.Extension;
 import hudson.model.RootAction;
 import hudson.model.UpdateCenter;
@@ -22,7 +23,7 @@ public class JenkinsUpdateAvailableAction implements RootAction {
 
     @Override
     public String getIconFileName() {
-        if (!coreUpdateMonitor.isActivated()) {
+        if (!coreUpdateMonitor.isActivated() || userHasNoAdministerPermission()) {
             return null;
         }
 

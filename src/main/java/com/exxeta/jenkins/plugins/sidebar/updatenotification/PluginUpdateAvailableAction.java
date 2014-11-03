@@ -1,5 +1,6 @@
 package com.exxeta.jenkins.plugins.sidebar.updatenotification;
 
+import static com.exxeta.jenkins.plugins.sidebar.updatenotification.JenkinsPermissionValidator.userHasNoAdministerPermission;
 import hudson.Extension;
 import hudson.model.RootAction;
 import hudson.model.UpdateCenter;
@@ -15,7 +16,7 @@ public class PluginUpdateAvailableAction implements RootAction {
     private UpdateCenter updateCenter = Jenkins.getInstance().getUpdateCenter();
 
     public String getIconFileName() {
-        if (updateCenter.getUpdates().isEmpty()) {
+        if (updateCenter.getUpdates().isEmpty() || userHasNoAdministerPermission()) {
             return null;
         }
 
