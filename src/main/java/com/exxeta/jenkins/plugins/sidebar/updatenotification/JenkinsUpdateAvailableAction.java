@@ -31,7 +31,7 @@ public class JenkinsUpdateAvailableAction implements RootAction {
 
     @Override
     public String getDisplayName() {
-        return String.format("Update for jenkins available: %s", extractJenkinsUpdateersion());
+        return String.format(Messages.JenkinsUpdateAvailable(), extractJenkinsUpdateersion());
     }
 
     public String getUrlName() {

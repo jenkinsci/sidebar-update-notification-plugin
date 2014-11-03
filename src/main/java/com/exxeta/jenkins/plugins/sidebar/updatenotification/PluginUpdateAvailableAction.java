@@ -25,9 +25,9 @@ public class PluginUpdateAvailableAction implements RootAction {
     public String getDisplayName() {
         int availableUpdateCount = updateCenter.getUpdates().size();
         if (availableUpdateCount == 1) {
-            return "Update for 1 plugin is available";
+            return Messages.JenkinsPluginSingleUpdateAvailable();
         } else {
-            return String.format("Updates for %d plugins are available", availableUpdateCount);
+            return String.format(Messages.JenkinsPluginMultipleUpdatesAvailable(), availableUpdateCount);
         }
     }
 
