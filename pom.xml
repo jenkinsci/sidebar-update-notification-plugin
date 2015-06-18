@@ -12,12 +12,14 @@
     <name>Sidebar Update Notification Plugin</name>
     <packaging>hpi</packaging>
 
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Sidebar+Update+Notification+Plugin</url>
+
     <scm>
         <url>https://github.com/EXXETA/sidebar-update-notification-plugin</url>
         <connection>scm:git:https://github.com/EXXETA/sidebar-update-notification-plugin.git</connection>
         <developerConnection>scm:git:https://github.com/EXXETA/sidebar-update-notification-plugin.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <developers>
         <developer>
